@@ -26,7 +26,7 @@ function Curd() {
     e.preventDefault();
     console.log("Form Data:", obj);
 
-    let url = "http://localhost:2004/api/applicant/dosaveuser";
+    let url = "https://franchisebackend-production-fa4b.up.railway.app/api/applicant/dosaveuser";
     let resp = await axios.post(url, obj,{headers: {'Content-Type': 'application/x-www-form-urlencoded'  } });
     alert(JSON.stringify(resp.data));
     if (resp.data.status === true)

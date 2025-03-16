@@ -13,7 +13,7 @@ function Flogin() {
     setMessage("");
 
     try {
-      let url = "http://localhost:2004/api/applicant/login";
+      let url = "https://franchisebackend-production-fa4b.up.railway.app/api/applicant/login";
       const response = await axios.post(url, { email, password }, {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });

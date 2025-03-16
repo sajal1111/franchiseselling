@@ -11,7 +11,7 @@ const History = () => {
 
   const fetchSalesData = async () => {
     try {
-      const response = await axios.get("http://localhost:2004/client/getSales", {
+      const response = await axios.get("https://franchisebackend-production-fa4b.up.railway.app/client/getSales", {
         params: { from: fromDate, to: toDate }},{headers: {'Content-Type': 'application/x-www-form-urlencoded'  } }
       );
       setSalesData(response.data);

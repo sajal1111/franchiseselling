@@ -16,7 +16,7 @@ const Today = () => {
     e.preventDefault();
     console.log("Form Data:", obj);
     try {
-      const response = await axios.post("http://localhost:2004/client/dosaveuser", obj,{headers: {'Content-Type': 'application/x-www-form-urlencoded'  } });
+      const response = await axios.post("https://franchisebackend-production-fa4b.up.railway.app/client/dosaveuser", obj,{headers: {'Content-Type': 'application/x-www-form-urlencoded'  } });
       alert("Data submitted successfully!");
       setObj({ date: "", totalSales: "", totalCustomers: "" });
     } catch (error) {
