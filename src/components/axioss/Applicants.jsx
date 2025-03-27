@@ -34,7 +34,7 @@ const DashboardLayout = () => {
   const handleSendEmail = async (email, name) => {
     try {
         alert(`Sending email to: ${email}, Name: ${name}`);
-        let url = "http://localhost:2004/api/send-franchise-email";
+        let url = "https://franchisebackend-production-fa4b.up.railway.app/api/send-franchise-email";
       const response = await axios.post(url, { email, name }, {
           headers: {'Content-Type': 'application/x-www-form-urlencoded' },
       });
@@ -52,7 +52,7 @@ const DashboardLayout = () => {
 };
   const fetchApplications = async () => {
     try {
-      const response = await fetch("http://localhost:2004/api/applicant/takedata");
+      const response = await fetch("https://franchisebackend-production-fa4b.up.railway.app/api/applicant/takedata");
       const data = await response.json();
       if (data.status) {
         setApplications(data.applications);
@@ -68,7 +68,7 @@ const DashboardLayout = () => {
     try {
       console.log(" ID:", uid, "status:", istatus);
 
-      let url = "http://localhost:2004/api/applicant/updateStatus";
+      let url = "https://franchisebackend-production-fa4b.up.railway.app/api/applicant/updateStatus";
       
       const response = await axios.post(url, { uid, istatus }, {
           headers: {'Content-Type': 'application/x-www-form-urlencoded' },

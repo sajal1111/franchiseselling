@@ -7,7 +7,7 @@ const Chart = () => {
 
   const fetchSalesData = async () => {
     try {
-      const response = await axios.get("http://localhost:2004/client/getSales", {
+      const response = await axios.get("https://franchisebackend-production-fa4b.up.railway.app/client/getSales", {
         params: { from: "2024-01-01", to: "2025-12-31" }, // Replace with dynamic date
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });
